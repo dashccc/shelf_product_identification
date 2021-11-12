@@ -7,12 +7,15 @@ draft: false
 
 ## 使用场景
 
-根据生成方式可以分为生成式摘要和抽取式摘要。
+根据生成检测框方法不同可以分为Anchor Free方法和Anchor Based方法，而Anchor Based又可以进一步分为One-Stage方法和Two-Stage方法。
 
-* 抽取式摘要：找到一个文档中最重要的几个句子并对其进行拼接。
-* 生成式摘要：是一个序列生成问题，通过源文档序列, 生成序列摘要序列  
+* One-Stage：Yolo、SSD、RetinaNet。
+* Two-Stage：RCNN、Faster RCNN、FPN。  
 
 ![](algo.png)
+
+随着2012年AlexNet的出现，越来越多的领域被深度学习屠榜，而目标检测这个停滞多年的视觉领域也重新焕发的活力。目标检测的研究成果在计算机视觉三大顶会（CVPR/ICCV/ECCV）的占比也逐年增加。
+
 
 本workshop主要覆盖以下几个算法，对比结果如下
 * Pegasus

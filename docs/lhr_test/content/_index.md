@@ -1,5 +1,5 @@
 ---
-title: "AWS Datalab-文档摘要"
+title: "AWS DataLab 智能货架"
 date: 2021-11-05T14:52:27+08:00
 weight: 0200
 draft: false
@@ -8,24 +8,18 @@ draft: false
 
 **Author**
 
-* JUNYI LIU (AWS GCR Applied Scientist)
+* Haoran Lv (AWS GCR Applied Scientist)
 
 ## 概述
 
 本次workshop分为几个部分
 
-* 背景介绍- what is text summary？
-* 基于Amazon SageMaker的TEXTRANK模型训练动手实验
-* 基于Amazon SageMaker的Huggingface训练一个BART英文摘要模型
-    * 模型训练ß
-    * 模型部署
-* 基于Amazon SageMaker的MT5模型训练动手实验
-    * 本地模型训练
-    * 启动模型训练任务
-    * 模型部署
-* 基于Amazon SageMaker的CPT模型训练动手实验 
+* 背景介绍 - what is Object Detection？
+* 基于Amazon SageMaker的YOLOv5模型训练动手实验
     * 模型训练
-    * 模型增强训练
+    * 模型部署
+* 基于Amazon SageMaker的Os2d模型使用和部署
+    * 模型设置
     * 模型部署
 
 ## 本次 workshop 前提
