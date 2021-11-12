@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>店铺货架商品识别</title>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <link rel="stylesheet" href="../static/css/comon0.css">
+</head>
+<script type="text/javascript" src="../static/js/loading.js"></script>
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+<script type="text/javascript" src="../static/js/china.js"></script>
+
+<body>
+
+<!--这是一个动态的粒子效果图，设置了透明度为0.2-->
+<div class="canvas" style="opacity: 0.5">
+    <iframe frameborder="0" src="../static/js/index.html" style="width: 100%; height: 100%"></iframe>
+</div>
+
+<div class="head">
+
+    <!-- <h1 font-size="20px">亚马逊云科技</h1> -->
+    <h1><img src="static/images/aws_logo.png"/></h1>
+
+    <div class="weather">
+        <span id="showTime"></span>
+    </div>
+
+<!--    尝试放到js里面-->
+    <script type="text/javascript" src="../static/js/showtime.js"></script>
+
+</div>
+
+<div class="mainbox">
+    <ul class="clearfix">
+    	<li>
+    		<div class="boxall" style="height: 6.3rem">
+    			<div class="alltitle">拍摄区域</div>
+	             <div class="allnav">
+	             	<img id="camera" class="img-hor" src="{{ url_for('video_feed') }}" height="80%" >
+					<form class="form_align" method="post" action="{{ url_for('tasks') }}">
+						<!-- <input type="submit" class="button_style" value="关闭摄像头/开启摄像头" name="stop" /> -->
+						<input type="submit" class="button_style" value="拍照并分析" name="click"/>
+						<input type="submit" class="button_style" value="测试" name="test"/>
+					</form>
+				</div>
+				<div class="boxfoot"></div>
+        	</div>
+        </li>
+        <li>
+        	<div class="boxall" style="height: 6.3rem">
+        		<div class="alltitle">商品图片识别</div>
+        		<div class="allnav">
+        			<img id="result_img" src="static/result_images/output.jpg" height="86%" />
+        			<div class="img_text_style">注：红色方框标注了摆放错位置的商品</div>
+        		</div>
+        		<div class="boxfoot"></div>
+        	</div>
+        </li>
+	</ul>
+</div>
+<div class="mainbox">
+	    <li>
+	    	<div class="boxall">
+	    		<div class="alltitle">商品库存情况</div>
+	    		<div class="allnav" align="center">
+	    			<div id="result_text"></div>
+	    		</div>
+	    		<div class="boxfoot"></div>
+	    	</div>
+	    </li>
+	<!-- </ul> -->
+</div>
+
+<script>
+	function refresh(node) {
+		var times = 3000; // gap in Milli Seconds;
+
+	    (function startRefresh()
+	    {
+	       var address;
+	       if(node.src.indexOf('?')>-1)
+	        address = node.src.split('?')[0];
+	       else 
+	       	address = node.src;
+	       node.src = address+"?time="+new Date().getTime();
+	       setTimeout(startRefresh,times);
+	   })();
+	}
+	function refresh_text(){
+		setInterval(function(){
+		$("#result_text").load('static/result_images/stock_results.txt')
+		}, 2000);
+	}
+
+	window.onload = function()
+	{
+	  var node = document.querySelector('#result_img', '#result_text');
+	  refresh(node);
+	  // you can refresh as many images you want just repeat above steps
+	  refresh_text();
+	}
+
+</script>
+
+</body>
+</html>>

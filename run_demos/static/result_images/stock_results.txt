@@ -1,0 +1,1 @@
+<table class="table_style"<tr><td class="result_style">元气森林葡萄味的库存为：2</td><td class="result_style">喜茶苏打水雪梨味的库存为：1</td><td class="result_style">元气森林橘子味的库存为：2</td></tr><tr><td class="result_style">元气森林菠萝味的库存为：2</td><td class="result_style">喜茶苏打水葡萄味的库存为：1</td><td class="result_style">元气森林乳酸菌味的库存为：2</td></tr>
