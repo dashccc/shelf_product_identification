@@ -19,7 +19,7 @@ draft: false
     * 模型训练
     * 模型部署
 * 基于Amazon SageMaker的Os2d模型使用和部署
-    * 模型设置
+    * 模型测试
     * 模型部署
 
 ## 本次 workshop 前提
