@@ -14,10 +14,14 @@ The folder structure of this solution is as belows:
     - os2d
     - yolov5 
 - run_demos
+- docs
+- test
 
 The two models, OS2D and YOLOv5, are placed in under folder "deploy_models".
 
 The simple business logic demo is placed under folder "run_demos".
+
+The online tutorials are placed under folder "docs", and the test cases are placed in folder "test". There is no need to look at these two folders.
 <br/><br/>
 
 # Procedure to run the demo
