@@ -1,19 +1,33 @@
-# Camera_Flask_App
-Camera app using flask, OpenCV wherein we can click pictures, record videos, apply filters like  greyscale, negative and 'face only' snapchat filter.
+# Shelf Product Identification
+Shelf Product Identification is the solution based on object detection. Two types of modeles, YOLOv5 and One-Stage One-Shot Object Detection(OS2D), are utilized in this solution. 
 
-## Procedure to run the app:
+This solution also provides a simple demo to present the business logic, which contains processes of product photo taking, image inference and displaying output results.
+<br/><br/>
 
---To run this app, you should have python, flask and OpenCV installed on your PC. 
+# Tutorials of Model Deployment
+Link: https://dashccc.github.io/shelf_product_identification/
+<br></br>
 
---To start the app, clone this repo and move to the project directory in the command prompt. 
-Type: 
+# Solution Structure
+The folder structure of this solution is as belows:
+- deploy_models
+    - os2d
+    - yolov5 
+- run_demos
+
+The two models, OS2D and YOLOv5, are placed in under folder "deploy_models".
+
+The simple business logic demo is placed under folder "run_demos".
+<br/><br/>
+
+# Procedure to run the demo
+Prerequisite:
+- The modeling endpoint must be deployed in SageMaker Endpoint.
+- In line 51 of file "camera_flask_app.py" under folder "run_demos", the right aws profile must be provided.
+
+Steps to run the demo:
+1. To run this demo, you should have python, flask and OpenCV installed on your OS sytem. 
+2. To start the demo, clone this repo and move to the project directory in the command prompt. 
+Go to folder "run-demos" and type: 
 python camera_flask_app.py
-
---Now, copy-paste http://127.0.0.1:5000/ into your favorite internet browser and that's it.
-
---Please read my medium blog post for detailed explanation: [Camera App with Flask and OpenCV](https://naghemanth.medium.com/camera-app-with-flask-and-opencv-bd147f6c0eec?source=friends_link&sk=705255bd58cf139ad95ab2149806d8c6).
-
-## Demo:
-![alt text](saved_model/demo.gif)
-
-
+3. Now, copy-paste http://127.0.0.1:5000/ into your favorite internet browser and that's it.
